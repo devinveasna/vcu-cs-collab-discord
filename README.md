@@ -27,6 +27,11 @@ vcu-cs-collab-discord/
 - 🛠 Setting up governance and risk mitigation policies  
 - 📌 Development planned to start after Advisory Board feedback  
 
+## Access & Verification
+This server is for VCU CS students (with alumni and faculty exceptions).  
+New members must verify with a `@vcu.edu` email to receive the **Verified Student** role.  
+A Duo-backed SSO verification process may be added in the future if approved by VCU IT.
+
 ## How to Contribute
 1. Join the discussion on the project (Advisory Board or GitHub Issues).
 2. Submit feature ideas via GitHub Issues.

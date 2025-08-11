@@ -80,6 +80,31 @@ A custom Discord bot will be developed to facilitate structured Q&A, study group
 - **Moderation:** Flagging system, escalation to faculty if needed.
 - **Privacy:** Bot stores only minimal metadata for analytics; all data retention <90 days.
 
+### 7.1 Student Verification
+
+**Goal:** Ensure only current VCU Computer Science students (plus approved alumni/faculty) can access the server.
+
+**Current Method: VCU Email Verification (One-Time Code)**
+1. On join, users can only see `#welcome` and `#verify`.
+2. User runs `/verify email <netid>@vcu.edu`.
+3. Bot emails a one-time code to the `@vcu.edu` address.
+4. User submits `/verify code <code>`.
+5. Bot assigns the `Verified Student` role.
+
+**Alternative / Access Exceptions**
+- Alumni: manual approval → `Alumni` role.
+- Faculty/TAs: manual approval → `Faculty/TA` role.
+
+**Risks & Mitigations**
+| Risk | Mitigation |
+|------|------------|
+| Shared/invalid emails | Restrict to `@vcu.edu`, rate-limit attempts, log verification events |
+| Lost access / email change | Allow re-verification; mods can reset verification |
+| Privacy concerns | Store only minimal metadata (user ID, timestamp), expire logs ≤ 90 days |
+
+**Future Option: Duo-Backed SSO Verification**
+If VCU IT approves registering this project as an SSO client, verification can occur via the university login (which enforces Duo), then the bot assigns roles based on a verified callback. Until approved, the project uses email-based verification.
+
 ---
 
 ## 8. Implementation Plan
