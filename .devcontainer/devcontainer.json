@@ -1,5 +1,5 @@
 {
-  "name": "VCU CS Discord Bot",
+  "name": "CS Discord Bot",
   "dockerFile": "Dockerfile",
   "context": "..",
   "remoteUser": "node",

@@ -1,5 +1,5 @@
 {
-  "name": "vcu-cs-collab-discord",
+  "name": "cs-collab-discord",
   "version": "1.0.0",
   "description": "A student-led initiative to create a university-wide Discord community for Computer Science students at **Virginia Commonwealth University** to collaborate, share resources, and connect.  \r Includes a custom-built Discord bot to facilitate structured Q&A, study groups, AI-assisted features, and job networking — all while respecting academic integrity.",
   "main": "index.js",
